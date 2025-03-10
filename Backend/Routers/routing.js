@@ -1,6 +1,6 @@
 import express from 'express'
-
-
+import { LoginDetail,signupDetail } from '../Controller/authController.js'
+import { insertData ,getData,getDataId} from '../Controller/testandupdate.js'
 const authRouter=express.Router()
 const testModalRouter=express.Router()
 const testUpdateRouter=express.Router()
@@ -9,14 +9,15 @@ const testUpdateRouter=express.Router()
 
 
 
-authRouter.post('/login',)
-authRouter.post('/signup',)
+authRouter.post('/login',LoginDetail)
+authRouter.post('/signup',signupDetail)
 
 
 
 
-testModalRouter.post('/newTest',)
-testModalRouter.get('/testId',)
+testModalRouter.post('/newTest',insertData)
+testModalRouter.get('/',getData)
+testModalRouter.get('/testid',getDataId)
 
 
 

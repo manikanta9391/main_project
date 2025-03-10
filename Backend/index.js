@@ -17,7 +17,7 @@ app.use('/update',testUpdateRouter)
 
 
 
-const Port=process.env.port || 3423;
+const Port= 3425;
 app.listen(Port,()=>{
     console.log(`server started ${Port}`)
 })
