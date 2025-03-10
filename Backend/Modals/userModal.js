@@ -31,8 +31,6 @@ const userSchem = {
 };
 
 const userSchema = new mongoose.Schema(userSchem);
-
-// Create the user model
 const userModal = mongoose.model("userLogins", userSchema);
 
 export default userModal;
